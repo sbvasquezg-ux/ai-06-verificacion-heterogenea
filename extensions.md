@@ -16,27 +16,39 @@ Con $c(z)=\kappa(1-z)$, $\kappa\geq0$, el conocimiento ahorra recursos de valida
 
 El asesor atiende a $n(z)$ trabajadores y su restricción de tiempo implica
 
-$$hn(z)(1-z)=1,\qquad n(z)=\frac1{h(1-z)},\qquad n'(z)=\frac1{h(1-z)^2}.$$
+```math
+hn(z)(1-z)=1,\qquad n(z)=\frac1{h(1-z)},\qquad n'(z)=\frac1{h(1-z)^2}.
+```
 
 La firma elige el tipo contratado, no la educación de una persona, tomando como dados el salario por tipo y la renta del cómputo:
 
-$$\max_{z\in[0,a]}\Pi^V(z)=n(z)[a-w^V(z)-c(z)]-r.$$
+```math
+\max_{z\in[0,a]}\Pi^V(z)=n(z)[a-w^V(z)-c(z)]-r.
+```
 
 Bajo diferenciabilidad y para un óptimo interior,
 
-$$\Pi^{V\prime}(z)=n'(z)[a-w^V(z)-c(z)]-n(z)[w^{V\prime}(z)+c'(z)]=0.$$
+```math
+\Pi^{V\prime}(z)=n'(z)[a-w^V(z)-c(z)]-n(z)[w^{V\prime}(z)+c'(z)]=0.
+```
 
 Como $n'/n=1/(1-z)$,
 
-$$w^{V\prime}(z)+c'(z)=\frac{a-w^V(z)-c(z)}{1-z}.$$
+```math
+w^{V\prime}(z)+c'(z)=\frac{a-w^V(z)-c(z)}{1-z}.
+```
 
 Beneficio cero en una firma activa implica $a-w^V-c=r/n=rh(1-z)$. Sustituyendo:
 
-$$\boxed{w^{V\prime}(z)+c'(z)=hr.}$$
+```math
+\boxed{w^{V\prime}(z)+c'(z)=hr.}
+```
 
 Con masa humana uno, cada usuario requiere a lo sumo $h$ unidades de asesoría; $\mu>h$ es una condición suficiente de cómputo ocioso en este régimen. Por complementariedad $r=0$. Así, para firmas activas con IA:
 
-$$w^V(z)=a-c(z),\qquad w^{V\prime}(z)=-c'(z)=\kappa.$$
+```math
+w^V(z)=a-c(z),\qquad w^{V\prime}(z)=-c'(z)=\kappa.
+```
 
 No es una ecuación para identificar un tipo único: el salario competitivo se ajusta. Tampoco describe salarios de quienes no usan IA.
 
@@ -48,7 +60,9 @@ En $z=0$ se requiere $\Pi'(0)\leq0$; en $z=a$, $\Pi'(a)\geq0$, con derivadas uni
 
 Sea $w^0(z)$ el salario de equilibrio anterior a IA. Para $r=0$:
 
-$$\Delta^0(z)=a-c(z)-w^0(z),\qquad \Delta^{0\prime}(z)=-c'(z)-w^{0\prime}(z).$$
+```math
+\Delta^0(z)=a-c(z)-w^0(z),\qquad \Delta^{0\prime}(z)=-c'(z)-w^{0\prime}(z).
+```
 
 Con costo lineal, $\Delta^{0\prime}=\kappa-w^{0\prime}$. Un costo que disminuye con rapidez puede hacer crecer inicialmente la rentabilidad de entrada. El ejemplo uniforme usa $h=.5$, $a=.88$, $\kappa=.53$:
 
@@ -64,9 +78,15 @@ El intervalo de entrada rentable en este ejemplo es aproximadamente $(.066081,.4
 
 Para cómputo abundante, las restricciones de ausencia de beneficios incluyen
 
-$$w(z)\geq z,$$
-$$w(z)\geq a-c(z)\quad(z\leq a),$$
-$$w(z)+h(1-z)w(s)\geq s\quad(z\leq s).$$
+```math
+w(z)\geq z,
+```
+```math
+w(z)\geq a-c(z)\quad(z\leq a),
+```
+```math
+w(z)+h(1-z)w(s)\geq s\quad(z\leq s).
+```
 
 Debe haber igualdad en actividades utilizadas, vaciado de mercados humanos por tipo y factibilidad y complementariedad del cómputo. Las desigualdades solas no bastan. El plan es discretizar tipos, resolver la asignación con recursos humanos y cómputo, recuperar salarios duales, verificar residuos y robustez al tamaño de malla.
 

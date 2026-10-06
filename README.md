@@ -24,11 +24,15 @@ La presentación tiene 12 diapositivas centrales (20 minutos) y tres de apoyo. W
 
 La firma paga un costo real obligatorio $c(z)\geq0$ por trabajador y período, medido en unidades del bien final. La especificación inicial es $c(z)=\kappa(1-z)$. Este costo no añade tiempo de consulta ni introduce errores de la IA: se conserva $n(z)=1/[h(1-z)]$.
 
-$$\max_{0\leq z\leq a}\;\Pi^V(z)=n(z)[a-w^V(z)-c(z)]-r.$$
+```math
+\max_{0\leq z\leq a}\;\Pi^V(z)=n(z)[a-w^V(z)-c(z)]-r.
+```
 
 Para un óptimo interior diferenciable, la FOC es
 
-$$n'(z)[a-w^V(z)-c(z)]-n(z)[w^{V\prime}(z)+c'(z)]=0.$$
+```math
+n'(z)[a-w^V(z)-c(z)]-n(z)[w^{V\prime}(z)+c'(z)]=0.
+```
 
 Con beneficio cero se obtiene $w^{V\prime}(z)+c'(z)=hr$. Si el cómputo es abundante y $r=0$, las firmas activas con IA pagan $w^V(z)=a-c(z)$; para el costo lineal, la pendiente de ese tramo es $\kappa$. **Estas identidades locales no determinan por sí solas quién utiliza IA en equilibrio.**
 
