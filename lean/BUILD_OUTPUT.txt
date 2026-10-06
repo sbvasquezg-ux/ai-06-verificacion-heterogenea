@@ -1,0 +1,5 @@
+'HeterogeneousVerification.zeroRentOffer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeterogeneousVerification.linearCostOffer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeterogeneousVerification.slopeAtZeroRent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeterogeneousVerification.positiveCostLowersOffer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeterogeneousVerification.entryIffPositiveProfit' depends on axioms: [propext, Classical.choice, Quot.sound]

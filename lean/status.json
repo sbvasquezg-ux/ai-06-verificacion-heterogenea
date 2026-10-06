@@ -1,0 +1,8 @@
+{
+  "status": "partial_algebra_checked",
+  "lean": "4.30.0-rc2",
+  "checked_lemmas": 5,
+  "sorry": 0,
+  "new_axioms": 0,
+  "equilibrium_formalized": false
+}

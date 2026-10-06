@@ -1,0 +1,58 @@
+% Fuente alternativa de contenido; presentation.pdf fue exportado desde PowerPoint.
+% Compilar con pdflatex dos veces, con una distribución TeX actual.
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{assets/ide-beamer}
+\title{Verificación heterogénea y acceso a la IA}
+\subtitle{Extensión formal de Ide y Talamàs (2025)}
+\author{Belén Vásquez}
+\date{Primer avance de investigación}
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+\begin{frame}{Pregunta de investigación}
+¿Puede un costo de validación decreciente con el conocimiento cambiar quién utiliza IA?\begin{itemize}\item Distinguir acceso, adopción directa y salario.\item Investigar la robustez de la asignación a la base.\item La selección intermedia es una hipótesis de equilibrio.\end{itemize}
+\end{frame}
+\begin{frame}{Modelo de referencia}
+$z\in[0,1]$: conocimiento humano; $a\in(0,1)$: capacidad de IA.\\ IA como asesora de tipos $z\leq a$.\[hn(z)(1-z)=1,\qquad n(z)=\frac1{h(1-z)}.\] El producto bruto por trabajador con IA es $a$.
+\end{frame}
+\begin{frame}{Resultado que se quiere extender}
+En el régimen no autónomo del artículo, la Proposición 6 caracteriza a los usuarios en la base bajo sus condiciones.\\ Con cómputo ocioso, $r=0$; en firmas activas con IA y sin esta fricción, $w=a$.\\ La extensión introduce un costo operativo adicional.
+\end{frame}
+\begin{frame}{Nuevo supuesto}
+Costo real por trabajador y período, pagado por la firma:\[c(z)\geq0,\quad c'(z)\leq0,\qquad c(z)=\kappa(1-z).\] No agrega tiempo de consulta ni una probabilidad de error. Es validación obligatoria en forma reducida. Producto neto: $a-c(z)$.
+\end{frame}
+\begin{frame}{Problema de la firma}
+La firma elige el tipo contratado, tomando salarios y renta como dados:\[\max_{0\leq z\leq a}\Pi^V(z)=n(z)[a-w^V(z)-c(z)]-r.\] Más conocimiento aumenta el tamaño del equipo y reduce el costo de validación, pero puede exigir mayor salario.
+\end{frame}
+\begin{frame}{Condición de primer orden}
+Óptimo interior diferenciable:\[n'(a-w-c)-n(w'+c')=0.\]\[\frac{n'}{n}=\frac1{1-z},\qquad a-w-c=rh(1-z)\quad\text{(beneficio cero)}.\]\[\boxed{w'+c'=hr}.\]
+\end{frame}
+\begin{frame}{Cómputo abundante}
+Con masa humana uno, $\mu>h$ basta para capacidad ociosa en este régimen. Entonces $r=0$.\[w^V(z)=a-c(z),\qquad w^{V\prime}(z)=-c'(z)=\kappa.\] Solo en el tramo de firmas activas con IA; no determina la asignación completa.
+\end{frame}
+\begin{frame}{Diagnóstico de entrada}
+A salarios anteriores a IA:\[\Delta^0(z)=a-c(z)-w^0(z),\quad \Delta^{0\prime}(z)=\kappa-w^{0\prime}(z).\] Si el ahorro de validación supera la pendiente salarial, la oportunidad de entrada aumenta con el conocimiento.
+\end{frame}
+\begin{frame}{Ejemplo ilustrativo}
+$h=.5$, $a=.88$, $\kappa=.53$, distribución uniforme.\begin{center}\begin{tabular}{r|rrr}$z$ & $w^0$ & $a-c$ & $\Delta^0$\\\hline 0 & .357044 & .350000 & -.007044\\ .25 & .474391 & .482500 & .008109\\ .60 & .691177 & .668000 & -.023177\end{tabular}\end{center} Entrada rentable en un intervalo intermedio a salarios fijos. No es el nuevo equilibrio.
+\end{frame}
+\begin{frame}{Lo que falta resolver}
+\begin{itemize}\item Ajustar simultáneamente salarios y asignación.\item Comparar costo cero, constante y heterogéneo.\item Verificar vaciado de mercados y factibilidad.\item Separar usuarios directos, salarios y producto neto.\end{itemize}
+\end{frame}
+\begin{frame}{Contribución y alcance}
+El avance aporta una fricción precisa, una FOC y un diagnóstico reproducible.\\ El resultado esperado es identificar condiciones de robustez o cambio en la selección de usuarios.\\ No se afirma todavía selección intermedia en equilibrio ni perjuicios salariales para la base.
+\end{frame}
+\appendix
+\begin{frame}{Apoyo: bordes y segunda derivada}
+Condiciones necesarias:\[\Pi'(0)\leq0,\qquad\Pi'(a)\geq0.\] En un punto interior estacionario:\[\Pi^{\prime\prime}=-n(w^{\prime\prime}+c^{\prime\prime})\leq0.\] No basta para suficiencia global; pueden existir indiferencia y quiebres.
+\end{frame}
+\begin{frame}{Apoyo: restricciones competitivas}
+\[w(z)\geq z,\qquad w(z)\geq a-c(z)\;(z\leq a).\]\[w(z)+h(1-z)w(s)\geq s\;(z\leq s).\] Igualdad en actividades utilizadas, vaciado humano y complementariedad del cómputo. El cierre sigue pendiente.
+\end{frame}
+\begin{frame}{Apoyo: fuentes y verificación}
+Ide y Talamàs (2025), \emph{Artificial Intelligence in the Knowledge Economy}, JPE 133(12), 3762--3800.\\ \url{https://arxiv.org/html/2312.05481v11}\\ Código: diagnóstico numérico; Lean: cinco consecuencias algebraicas. No constituyen una prueba del equilibrio extendido.
+\end{frame}
+\end{document}

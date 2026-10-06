@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+.env
+lean/.lake/
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
